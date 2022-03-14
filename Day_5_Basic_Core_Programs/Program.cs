@@ -27,6 +27,9 @@ namespace Day_5_Basic_Core_Programs
                 case 2:
                     Leap_Year year = new Leap_Year();
                     break;
+                case 3:
+                    Power_of_Two iterations = new Power_of_Two();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -100,4 +103,23 @@ namespace Day_5_Basic_Core_Programs
         }
     }
 
+    class Power_of_Two
+    {
+        public Power_of_Two()
+        {
+            Console.Write("Please enter a number: ");
+            int Number = Convert.ToInt32(Console.ReadLine());
+
+            while (Number < 0 || Number >= 31)
+            {
+                Console.Write("Please enter a valid number: ");
+                Number = Convert.ToInt32(Console.ReadLine());
+            }
+
+            for (int i = 1; i <= Number; i++)
+            {
+                Console.WriteLine(Math.Pow(2, i));
+            }
+        }
+    }
 }
