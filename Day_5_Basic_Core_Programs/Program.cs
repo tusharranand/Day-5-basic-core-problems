@@ -24,6 +24,9 @@ namespace Day_5_Basic_Core_Programs
                 case 1:
                     Flip_Percentage flip = new Flip_Percentage();
                     break;
+                case 2:
+                    Leap_Year year = new Leap_Year();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -69,6 +72,31 @@ namespace Day_5_Basic_Core_Programs
 
             Console.WriteLine(Heads_Percent + "% of the times the result was heads.");
             Console.WriteLine(Tails_Percent + "% of the times the result was tails.");
+        }
+    }
+
+    class Leap_Year
+    {
+        public Leap_Year()
+        {
+            Console.Write("Enter the year: ");
+            int Year = Convert.ToInt32(Console.ReadLine());
+
+            while (Year < 1000 || Year > 9999)
+            {
+                Console.Write("Please enter a four digit year: ");
+                Year = Convert.ToInt32(Console.ReadLine());
+            }
+
+            if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+            {
+                Console.WriteLine(Year + " is a leap year");
+            }
+            else
+            {
+                Console.WriteLine(Year + " is not a leap year");
+            }
+
         }
     }
 
