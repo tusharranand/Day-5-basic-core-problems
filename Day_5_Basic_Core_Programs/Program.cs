@@ -45,6 +45,9 @@ namespace Day_5_Basic_Core_Programs
                 case 8:
                     Even_or_Odd check = new Even_or_Odd();
                     break;
+                case 9:
+                    Vowel_or_Consonant compare = new Vowel_or_Consonant();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -223,6 +226,31 @@ namespace Day_5_Basic_Core_Programs
             else
             {
                 Console.WriteLine(Number + " is an Odd Number.");
+            }
+        }
+    }
+
+    class Vowel_or_Consonant
+    {
+        public Vowel_or_Consonant()
+        {
+            char[] Vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+            Console.Write("Enter the alphabet: ");
+            char Alph = char.ToLower(Convert.ToChar(Console.ReadLine()));
+
+            for (int i = 0; i <= Vowels.Length; i++)
+            {
+                if (i == 5)
+                {
+
+                    Console.WriteLine(Alph + " is a Consonant.");
+                }
+                else if (Alph == Vowels[i])
+                {
+                    Console.WriteLine(Alph + " is a Vowel.");
+                    break;
+                }
             }
         }
     }
