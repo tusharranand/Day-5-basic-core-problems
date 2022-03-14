@@ -48,6 +48,9 @@ namespace Day_5_Basic_Core_Programs
                 case 9:
                     Vowel_or_Consonant compare = new Vowel_or_Consonant();
                     break;
+                case 10:
+                    Comparing largest = new Comparing();  
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -252,6 +255,23 @@ namespace Day_5_Basic_Core_Programs
                     break;
                 }
             }
+        }
+    }
+
+    class Comparing
+    {
+        public Comparing()
+        {
+            int[] Numbers = new int[3];
+
+            Console.Write("Enter the first Number: ");
+            Numbers[0] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the second Number: ");
+            Numbers[1] = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the third Number: ");
+            Numbers[2] = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine(Numbers.Max() + " is the largest of the given numbers.");
         }
     }
 }
