@@ -40,7 +40,7 @@ namespace Day_5_Basic_Core_Programs
     class Flip_Percentage
     {
 
-        public void Computation()
+        public Flip_Percentage()
         {
             int Heads = 0;
             int Tails = 0;
