@@ -39,6 +39,9 @@ namespace Day_5_Basic_Core_Programs
                 case 6:
                     Divide calculate = new Divide();
                     break;
+                case 7:
+                    Swap numbers = new Swap();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -49,7 +52,7 @@ namespace Day_5_Basic_Core_Programs
     class Flip_Percentage
     {
 
-        public void Computation()
+        public Flip_Percentage()
         {
             int Heads = 0;
             int Tails = 0;
@@ -182,6 +185,24 @@ namespace Day_5_Basic_Core_Programs
             Console.WriteLine("Quotient = " + Dividend / Divisor);
             Console.WriteLine("Remainder = " + Dividend % Divisor);
 
+        }
+    }
+
+    class Swap
+    {
+        public Swap()
+        {
+            Console.Write("Enter a two digit Number: ");
+            int Number = Convert.ToInt32(Console.ReadLine());
+
+            int Reverse = 0;
+
+            for (int i = 1; i >= 0; i--)
+            {
+                Reverse += (Number % 10) * (int)Math.Pow(10, i);
+                Number = Number / 10;
+            }
+            Console.WriteLine("The reverse of given number is: " + Reverse);
         }
     }
 }
