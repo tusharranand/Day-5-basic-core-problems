@@ -30,6 +30,9 @@ namespace Day_5_Basic_Core_Programs
                 case 3:
                     Power_of_Two iterations = new Power_of_Two();
                     break;
+                case 4:
+                    Harmonics Nth = new Harmonics();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -120,6 +123,23 @@ namespace Day_5_Basic_Core_Programs
             {
                 Console.WriteLine(Math.Pow(2, i));
             }
+        }
+    }
+
+    class Harmonics
+    {
+        public Harmonics()
+        {
+            float Result_Harmonic = 0;
+
+            Console.Write("Enter the value of N for Nth Harmonic: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            for (float i = 1; i <= N; i++)
+            {
+                Result_Harmonic += 1 / i;
+            }
+            Console.WriteLine("The Nth Harmonic is given by {0}", Result_Harmonic);
         }
     }
 }
