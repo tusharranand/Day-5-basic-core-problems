@@ -36,6 +36,9 @@ namespace Day_5_Basic_Core_Programs
                 case 5:
                     Factors prime = new Factors();
                     break;
+                case 6:
+                    Divide calculate = new Divide();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -164,5 +167,21 @@ namespace Day_5_Basic_Core_Programs
             }
         }
 
+    }
+
+    class Divide
+    {
+        public Divide()
+        {
+            Console.Write("Enter the Dividend: ");
+            int Dividend = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Enter the Divisor: ");
+            int Divisor = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Quotient = " + Dividend / Divisor);
+            Console.WriteLine("Remainder = " + Dividend % Divisor);
+
+        }
     }
 }
