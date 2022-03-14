@@ -33,6 +33,9 @@ namespace Day_5_Basic_Core_Programs
                 case 4:
                     Harmonics Nth = new Harmonics();
                     break;
+                case 5:
+                    Factors prime = new Factors();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -141,5 +144,25 @@ namespace Day_5_Basic_Core_Programs
             }
             Console.WriteLine("The Nth Harmonic is given by {0}", Result_Harmonic);
         }
+    }
+
+    class Factors
+    {
+        public Factors()
+        {
+            Console.Write("Enter the Numbe: ");
+            int Number = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Prime Factors for {0] are,", Number);
+
+            for (int i = 2; i * i <= Number; i++)
+            {
+                if (Number % i == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+        }
+
     }
 }
