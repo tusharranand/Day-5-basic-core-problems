@@ -42,6 +42,9 @@ namespace Day_5_Basic_Core_Programs
                 case 7:
                     Swap numbers = new Swap();
                     break;
+                case 8:
+                    Even_or_Odd check = new Even_or_Odd();
+                    break;
                 default:
                     Console.WriteLine("Invalid Entry");
                     break;
@@ -203,6 +206,24 @@ namespace Day_5_Basic_Core_Programs
                 Number = Number / 10;
             }
             Console.WriteLine("The reverse of given number is: " + Reverse);
+        }
+    }
+
+    class Even_or_Odd
+    {
+        public Even_or_Odd()
+        {
+            Console.Write("Enter a Number: ");
+            int Number = Convert.ToInt32(Console.ReadLine());
+
+            if (Number % 2 == 0)
+            {
+                Console.WriteLine(Number + " is an Even Number.");
+            }
+            else
+            {
+                Console.WriteLine(Number + " is an Odd Number.");
+            }
         }
     }
 }
